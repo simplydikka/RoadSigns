@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RoadSigns</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- Welcome Screen -->
+    <string name="next">Напред</string>
+    <string name="skip">Назад</string>
+    <string name="start">Начало</string>
+
+    <string name="slide_1_title">ВИНАГИ С ТЕБ</string>
+    <string name="slide_1_desc">Офлайн каталог за лесна самоподготовка директно в телефона ти!</string>
+
+    <string name="slide_2_title">ЛЕСНА НАВИГАЦИЯ</string>
+    <string name="slide_2_desc">Удобна търсачка, с която да откриеш конкретен знак веднага.</string>
+
+    <string name="slide_3_title">СПИСЪК ЗА БЪРЗ ДОСТЪП</string>
+    <string name="slide_3_desc">Добавяй знаци он всички категории в "Любими" за лесен достъп при преговор.</string>
+</resources>
