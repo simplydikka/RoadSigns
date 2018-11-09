@@ -22,6 +22,9 @@ public class HomeScreenTabs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen_tabs);
 
+        //tabbedstuff
+
+
         tabLayout = (TabLayout) findViewById(R.id.tabLayout_id);
         viewPager = (ViewPager) findViewById(R.id.viewPager_id);
         adapter = new HomeScreenPagerAdapter(getSupportFragmentManager());
@@ -34,6 +37,10 @@ public class HomeScreenTabs extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
+        //SETTINGS TO WORK WITH THE SPECIFIC TAB WHEN ONITEMCLICK, NEETS TO BE AFTER THE TABLAYOUT SETUP - END OF DOCUMENT
+        int defaultValue = 0;
+        int page = getIntent().getIntExtra("One", defaultValue);
+        viewPager.setCurrentItem(page);
 
     }
 

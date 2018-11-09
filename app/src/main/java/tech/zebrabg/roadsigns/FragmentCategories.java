@@ -49,6 +49,7 @@ public class FragmentCategories extends Fragment {
                                                     startActivity(intent);
 
                                                 }
+
                                             }
                                         }
 

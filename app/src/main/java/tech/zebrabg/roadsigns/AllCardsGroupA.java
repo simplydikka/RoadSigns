@@ -2,6 +2,7 @@ package tech.zebrabg.roadsigns;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -59,13 +60,33 @@ public class AllCardsGroupA extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
         mAdapter.setOnItemClickListener(new ItemTemplateAllCardsGroupAadapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(int position) {
-            Intent intent = new Intent(AllCardsGroupA.this, WelcomeActivity.class);
-            intent.putExtra("Example Item", mExampleList.get(position));
-            startActivity(intent);
-            }
-        });
+
+                                            @Override
+                                            public void onItemClick(int position) {
+                                                if(position ==0){
+                                                    Intent Intent = new Intent(AllCardsGroupA.this, HomeScreenTabs.class);
+                                                    startActivity(Intent);
+
+
+                                                }
+                                                if(position ==1){
+                                                    Intent intent = new Intent (AllCardsGroupA.this, something.class);
+                                                    startActivity(intent);
+
+                                                }
+                                                //SETS ITEM CLICK TO LEAD TO A SPECIFIC TAB OF TABBED ACTIVITY
+                                                if(position ==2){
+                                                    int page = 1;
+                                                    Intent intent = new Intent (AllCardsGroupA.this, HomeScreenTabs.class);
+                                                    intent.putExtra("One", page);// One is your argument
+                                                    startActivity(intent);
+
+
+                                                }
+                                            }
+                                        }
+
+        );
     }
     @Override
     public boolean onSupportNavigateUp() {
