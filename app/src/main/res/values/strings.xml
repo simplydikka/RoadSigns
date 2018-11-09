@@ -16,4 +16,27 @@
 
     <string name="slide_3_title">СПИСЪК ЗА БЪРЗ ДОСТЪП</string>
     <string name="slide_3_desc">Добавяй знаци он всички категории в "Любими" за лесен достъп при преговор.</string>
+    <string name="placeholder">Placeholder</string>
+
+    <!-- Categories title and description -->
+    <string name="group_a_title">Група А</string>
+    <string name="group_a_description">Предупредителни пътни знаци за опасност</string>
+    <string name="group_b_title">Група Б</string>
+    <string name="group_b_description">Пътни знаци относно предимство</string>
+    <string name="group_v_title">Група В</string>
+    <string name="group_v_description">Пътни знаци за въвеждане на забрана и отменяне на въведена забрана</string>
+    <string name="group_g_title">Група Г</string>
+    <string name="group_g_description">Пътни знаци със задължителни предписания</string>
+    <string name="group_d_title">Група Д</string>
+    <string name="group_e_title">Група Е</string>
+    <string name="group_d_description">Пътни знаци със специални предписания</string>
+    <string name="group_e_description">Пътни знаци, даващи допълнителна информация</string>
+    <string name="group_j_title">Група Ж</string>
+    <string name="group_t_title">Група Т</string>
+    <string name="group_o_title">Други</string>
+    <string name="group_j_description">Пътни знаци за указване на направления, посоки, обекти и други</string>
+    <string name="group_t_description">Допълнителни табели</string>
+    <string name="group_o_description">Други средства за сигнализиране</string>
+    <string name="group_r_description">Общи правила за пътните знаци</string>
+    <string name="group_r_title">Правила</string>
 </resources>

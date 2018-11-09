@@ -1,44 +1,41 @@
 package tech.zebrabg.roadsigns;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+
+import java.util.Objects;
 
 public class HomeScreenTabs extends AppCompatActivity {
 
-    private static final String TAG = "homeScreen";
-
-    private HomeScreenTabsAdapter mSectionsPageAdapter;
-
-    private ViewPager mViewPager;
+   private TabLayout tabLayout;
+   private ViewPager viewPager;
+   private HomeScreenPagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen_tabs);
-        Log.d(TAG, "onCreate: Starting.");
 
-        mSectionsPageAdapter = new HomeScreenTabsAdapter(getSupportFragmentManager());
-        //Set up the ViewPager with the sections adapter
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        setupViewPager(mViewPager);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout_id);
+        viewPager = (ViewPager) findViewById(R.id.viewPager_id);
+        adapter = new HomeScreenPagerAdapter(getSupportFragmentManager());
 
-        //creates a tab layout object and sets the id to tabs
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
-    }
+        //Add Fragment Here
 
-    //creates a sections pager adapter and adds the fragments to the sections pager adapter and give them titles (like you're adding items to a list)
-    private void setupViewPager(ViewPager viewPager) {
-        HomeScreenTabsAdapter adapter = new HomeScreenTabsAdapter(getSupportFragmentManager());
-        //adapter.addFragment(new Tab1Categories(), "Категории");
-        //adapter.addFragment(new Tab2Favorites(), "Запазени");
-       // adapter.addFragment(new Tab3All(), "Всички");
-        //viewPager.setAdapter(adapter);
+        adapter.AddFragment(new FragmentCategories(), "Категории");
+        adapter.AddFragment(new FragmentFavorites(), "Запазени");
+        adapter.AddFragment(new FragmentAll(), "Всички");
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
 
 
     }
+
 
 }
