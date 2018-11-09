@@ -34,6 +34,27 @@ public class FragmentCategories extends Fragment {
         mRecyclerView = (RecyclerView) v.findViewById(R.id.categories_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mAdapter = new CategoriesRecyclerViewAdapter(getContext(), mCategoryItemsList);
+        mAdapter.setOnItemClickListener(new CategoriesRecyclerViewAdapter.OnItemClickListener() {
+
+                                            @Override
+                                            public void onItemClick(int position) {
+                                                if(position ==0){
+                                                    Intent Intent = new Intent(getActivity(), AllCardsGroupA.class);
+                                                    startActivity(Intent);
+
+
+                                                }
+                                                if(position ==1){
+                                                    Intent intent = new Intent (getActivity(), something.class);
+                                                    startActivity(intent);
+
+                                                }
+                                            }
+                                        }
+
+        );
+
+
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         mRecyclerView.setAdapter(mAdapter);
         return v;
@@ -62,6 +83,5 @@ public class FragmentCategories extends Fragment {
         mCategoryItemsList.add(new ItemTemplateCategories(R.drawable.signa1, getString(R.string.group_r_title), getString(R.string.group_r_description)));
 
     }
-
 
 }

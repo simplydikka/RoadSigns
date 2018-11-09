@@ -18,21 +18,29 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
 
     Context mContext;
     private List<ItemTemplateCategories> mCategoryItemsList;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
+
 
     public CategoriesRecyclerViewAdapter(Context mContext, List<ItemTemplateCategories> mCategoryItemsList) {
         this.mContext = mContext;
         this.mCategoryItemsList = mCategoryItemsList;
     }
 
-    public CategoriesRecyclerViewAdapter(ArrayList<ItemTemplateCategories> mCategoryItemsList) {
-    }
 
     @NonNull
     @Override
     public CategoriesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v;
         v = LayoutInflater.from(mContext).inflate(R.layout.item_template_categories, parent, false);
-        CategoriesViewHolder vHolder = new CategoriesViewHolder(v);
+        CategoriesViewHolder vHolder = new CategoriesViewHolder(v, mListener);
 
         return vHolder;
     }
@@ -56,15 +64,29 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
         public TextView textTitle;
         public TextView textDescription;
 
-        public CategoriesViewHolder (View itemView){
+        public CategoriesViewHolder (View itemView, final OnItemClickListener listener){
             super(itemView);
             imageView = itemView.findViewById(R.id.cardImage);
             textTitle = itemView.findViewById(R.id.cardTitle);
             textDescription = itemView.findViewById(R.id.cardDescription);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null){
+                        int position = getAdapterPosition();
+
+                        if (position != RecyclerView.NO_POSITION){
+                            listener.onItemClick(position);
+                        }
+                    }
+                }
+            });
+        }
         }
 
 
 
     }
 
-}
+

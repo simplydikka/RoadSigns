@@ -11,19 +11,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    <activity android:name=".WelcomeActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".HomeScreenTabs"
             android:label="HomeScreenTabs"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".something"></activity>
+        <activity
+            android:name=".AllCardsGroupA"
+            android:label="AllCardsGroupA"
+            android:theme="@style/AppTheme.ActionBar" />
+
 
     </application>
 
