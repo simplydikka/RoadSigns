@@ -26,8 +26,21 @@
         <activity android:name=".something"></activity>
         <activity
             android:name=".AllCardsGroupA"
-            android:label="AllCardsGroupA"
-            android:theme="@style/AppTheme.ActionBar" />
+            android:label="Група А"
+            android:theme="@style/AppTheme.ActionBar">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="tech.zebrabg.roadsigns.HomeScreenTabs" />
+
+        </activity>
+        <activity
+            android:name=".SingleCardGroupA"
+            android:label="Обратно към Група А"
+            android:theme="@style/AppTheme.ActionBar">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="tech.zebrabg.roadsigns.AllCardsGroupA" />
+        </activity>
 
 
     </application>
