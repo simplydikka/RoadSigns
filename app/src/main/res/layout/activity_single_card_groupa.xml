@@ -9,9 +9,9 @@
     tools:context="tech.zebrabg.roadsigns.AllCardsGroupA">
 
     <android.support.v4.widget.NestedScrollView
-        android:layout_weight="90"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="90"
         tools:context="com.example.android.signs.SingleCardGroupA">
 
         <LinearLayout
@@ -22,12 +22,12 @@
 
             <ImageView
                 android:id="@+id/image_activity2"
-                android:paddingLeft="@dimen/margin_20"
-                android:paddingRight="@dimen/margin_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_horizontal"
                 android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
                 android:scaleType="centerCrop" />
 
             <TextView
@@ -53,8 +53,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:layout_weight="10">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:text="Назад"
-                android:textColor="@color/white" />
+                android:textColor="@color/colorWhite" />
 
             <Button
                 android:id="@+id/next"
@@ -82,7 +82,7 @@
                 android:layout_gravity="right"
                 android:text="Напред"
 
-                android:textColor="@color/white" />
+                android:textColor="@color/colorWhite" />
         </android.support.v7.widget.Toolbar>
     </LinearLayout>
 </LinearLayout>

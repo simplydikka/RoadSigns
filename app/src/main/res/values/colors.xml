@@ -20,7 +20,6 @@
 
     <!-- dots active colors -->
     <color name="dot_light_screen">#d81b60</color>
-    <color name="white">#ffffff</color>
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen</item>
