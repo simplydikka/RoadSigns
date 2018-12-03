@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    tools:context="tech.zebrabg.roadsigns.AllCardsGroupA">
+    tools:context="tech.zebrabg.roadsigns.AllCardsGroupA"
+    android:id="@+id/root">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="90"
+        android:layout_weight="85"
+        android:scrollbars="vertical"
         tools:context="com.example.android.signs.SingleCardGroupA">
 
         <LinearLayout
@@ -45,22 +47,38 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginTop="16dp"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_weight="15"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_weight="10">
+        >
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_not_fav"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_marginBottom="@dimen/margin_30"/>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay">
@@ -81,8 +99,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:text="Напред"
-
                 android:textColor="@color/colorWhite" />
         </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

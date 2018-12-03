@@ -1,7 +1,9 @@
 package tech.zebrabg.roadsigns;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +14,6 @@ public class SingleCardGroupA extends AppCompatActivity {
 
     Button next;
     Button previous;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
