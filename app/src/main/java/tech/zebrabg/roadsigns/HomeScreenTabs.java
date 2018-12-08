@@ -13,11 +13,13 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.util.Objects;
 
+
 public class HomeScreenTabs extends AppCompatActivity {
 
    private TabLayout tabLayout;
    private ViewPager viewPager;
    private HomeScreenPagerAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,6 @@ public class HomeScreenTabs extends AppCompatActivity {
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
         MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
         //tabbedstuff
-
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout_id);
         viewPager = (ViewPager) findViewById(R.id.viewPager_id);

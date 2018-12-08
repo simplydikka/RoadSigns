@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "488266613653",
+    "firebase_url": "https://pytniznaci.firebaseio.com",
+    "project_id": "pytniznaci",
+    "storage_bucket": "pytniznaci.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488266613653:android:018ff43754107232",
+        "android_client_info": {
+          "package_name": "tech.zebrabg.roadsigns"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488266613653-bf2hk3ee4e4pt6gh5lv5tgcdron6q75a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQVWuPnj3qoF0hKn0rv6mPkZSkcF3PznY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
