@@ -24,8 +24,8 @@
 
             <ImageView
                 android:id="@+id/image_activity2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="top|center_horizontal"
                 android:adjustViewBounds="true"
                 android:paddingLeft="@dimen/margin_20"
@@ -70,9 +70,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_not_fav"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_centerHorizontal="true"
             android:layout_alignBottom="@id/toolbar"
-            android:layout_marginBottom="@dimen/margin_30"/>
+            android:layout_centerVertical="true"
+/>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -90,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:text="Назад"
+                android:textSize="14sp"
                 android:textColor="@color/colorWhite" />
 
             <Button
@@ -99,6 +103,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:text="Напред"
+                android:textSize="14sp"
+                android:padding="0dp"
                 android:textColor="@color/colorWhite" />
         </android.support.v7.widget.Toolbar>
     </RelativeLayout>

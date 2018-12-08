@@ -4,6 +4,7 @@
     package="tech.zebrabg.roadsigns">
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,25 +26,29 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".something"></activity>
+
         <activity
             android:name=".AllCardsGroupA"
             android:label="Група А"
             android:theme="@style/AppTheme.ActionBar">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="tech.zebrabg.roadsigns.HomeScreenTabs" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tech.zebrabg.roadsigns.HomeScreenTabs" />
 
         </activity>
         <activity
             android:name=".SingleCardGroupA"
             android:label="Обратно към Група А"
             android:theme="@style/AppTheme.ActionBar">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="tech.zebrabg.roadsigns.AllCardsGroupA" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tech.zebrabg.roadsigns.AllCardsGroupA" />
         </activity>
 
-
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
 
 </manifest>

@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.Objects;
 
 public class HomeScreenTabs extends AppCompatActivity {
@@ -21,7 +23,8 @@ public class HomeScreenTabs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen_tabs);
-
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
         //tabbedstuff
 
 
